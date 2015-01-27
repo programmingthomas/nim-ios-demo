@@ -30,6 +30,9 @@
 # contains the bin/ and lib/ directories.
 PATH_TO_NIM=~/Downloads/nim-0.10.2/
 
+# Set this to the name of the project.
+PROJECT_DIR=nim-ios-demo
+
 # Path of the actual Nim compiler
 PATH_TO_NIM_COMPILER=$PATH_TO_NIM"bin/nim"
 PATH_TO_NIMBASE=$PATH_TO_NIM"lib/nimbase.h"
@@ -38,12 +41,12 @@ PATH_TO_NIMBASE=$PATH_TO_NIM"lib/nimbase.h"
 set -e
 
 # If we are running from inside the scripts subdir, get out.
-if [ ! -d nim-ios/src ]
+if [ ! -d $PROJECT_DIR/src ]
 then
 	cd ..
 fi
 
-cd nim-ios
+cd $PROJECT_DIR
 
 DEST_NIMBASE=src/build/nimcache/nimbase.h
 

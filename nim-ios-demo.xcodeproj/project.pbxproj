@@ -129,6 +129,7 @@
 				E9C7296C1A77EE3A00803AC5 /* Sources */,
 				E9C7296D1A77EE3A00803AC5 /* Frameworks */,
 				E9C7296E1A77EE3A00803AC5 /* Resources */,
+				E9C729991A77F14400803AC5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -213,6 +214,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9C729991A77F14400803AC5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "nim-ios-demo/scripts/xcode_prebuild.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9C7296C1A77EE3A00803AC5 /* Sources */ = {
