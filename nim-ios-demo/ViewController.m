@@ -7,21 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "backend.h"
 
 @interface ViewController ()
+- (IBAction)textChanged:(UITextField *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)textChanged:(UITextField *)sender {
+    char * helloName = hello((char*)sender.text.UTF8String);
+    self.label.text = [NSString stringWithUTF8String:helloName];
 }
 
 @end
