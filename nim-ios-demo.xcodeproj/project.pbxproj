@@ -14,6 +14,8 @@
 		E9C729811A77EE3A00803AC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C729801A77EE3A00803AC5 /* Images.xcassets */; };
 		E9C729841A77EE3A00803AC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9C729821A77EE3A00803AC5 /* LaunchScreen.xib */; };
 		E9C729901A77EE3B00803AC5 /* nim_ios_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7298F1A77EE3B00803AC5 /* nim_ios_demoTests.m */; };
+		E9C729AA1A77F46000803AC5 /* backend.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C729A71A77F46000803AC5 /* backend.m */; };
+		E9C729AB1A77F46000803AC5 /* system.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C729A91A77F46000803AC5 /* system.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,16 @@
 		E9C729891A77EE3B00803AC5 /* nim-ios-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nim-ios-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C7298E1A77EE3B00803AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C7298F1A77EE3B00803AC5 /* nim_ios_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nim_ios_demoTests.m; sourceTree = "<group>"; };
+		E9C7299B1A77F37600803AC5 /* xcode_prebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = xcode_prebuild.sh; sourceTree = "<group>"; };
+		E9C7299D1A77F37600803AC5 /* backend.nim */ = {isa = PBXFileReference; lastKnownFileType = text; path = backend.nim; sourceTree = "<group>"; };
+		E9C729A01A77F37600803AC5 /* backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = backend.h; sourceTree = "<group>"; };
+		E9C729A11A77F37600803AC5 /* backend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = backend.m; sourceTree = "<group>"; };
+		E9C729A21A77F37600803AC5 /* nimbase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nimbase.h; sourceTree = "<group>"; };
+		E9C729A31A77F37600803AC5 /* system.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = system.m; sourceTree = "<group>"; };
+		E9C729A61A77F46000803AC5 /* backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend.h; sourceTree = "<group>"; };
+		E9C729A71A77F46000803AC5 /* backend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = backend.m; sourceTree = "<group>"; };
+		E9C729A81A77F46000803AC5 /* nimbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nimbase.h; sourceTree = "<group>"; };
+		E9C729A91A77F46000803AC5 /* system.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = system.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,9 @@
 		E9C729721A77EE3A00803AC5 /* nim-ios-demo */ = {
 			isa = PBXGroup;
 			children = (
+				E9C729A41A77F46000803AC5 /* build */,
+				E9C7299A1A77F37600803AC5 /* scripts */,
+				E9C7299C1A77F37600803AC5 /* src */,
 				E9C729771A77EE3A00803AC5 /* AppDelegate.h */,
 				E9C729781A77EE3A00803AC5 /* AppDelegate.m */,
 				E9C7297A1A77EE3A00803AC5 /* ViewController.h */,
@@ -117,6 +132,62 @@
 				E9C7298E1A77EE3B00803AC5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9C7299A1A77F37600803AC5 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E9C7299B1A77F37600803AC5 /* xcode_prebuild.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		E9C7299C1A77F37600803AC5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E9C7299D1A77F37600803AC5 /* backend.nim */,
+				E9C7299E1A77F37600803AC5 /* build */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		E9C7299E1A77F37600803AC5 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				E9C7299F1A77F37600803AC5 /* nimcache */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		E9C7299F1A77F37600803AC5 /* nimcache */ = {
+			isa = PBXGroup;
+			children = (
+				E9C729A01A77F37600803AC5 /* backend.h */,
+				E9C729A11A77F37600803AC5 /* backend.m */,
+				E9C729A21A77F37600803AC5 /* nimbase.h */,
+				E9C729A31A77F37600803AC5 /* system.m */,
+			);
+			path = nimcache;
+			sourceTree = "<group>";
+		};
+		E9C729A41A77F46000803AC5 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				E9C729A51A77F46000803AC5 /* nimcache */,
+			);
+			name = build;
+			path = src/build;
+			sourceTree = "<group>";
+		};
+		E9C729A51A77F46000803AC5 /* nimcache */ = {
+			isa = PBXGroup;
+			children = (
+				E9C729A61A77F46000803AC5 /* backend.h */,
+				E9C729A71A77F46000803AC5 /* backend.m */,
+				E9C729A81A77F46000803AC5 /* nimbase.h */,
+				E9C729A91A77F46000803AC5 /* system.m */,
+			);
+			path = nimcache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C729AA1A77F46000803AC5 /* backend.m in Sources */,
 				E9C7297C1A77EE3A00803AC5 /* ViewController.m in Sources */,
 				E9C729791A77EE3A00803AC5 /* AppDelegate.m in Sources */,
+				E9C729AB1A77F46000803AC5 /* system.m in Sources */,
 				E9C729761A77EE3A00803AC5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
