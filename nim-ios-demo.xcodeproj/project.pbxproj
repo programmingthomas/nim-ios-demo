@@ -14,8 +14,8 @@
 		E9C729811A77EE3A00803AC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C729801A77EE3A00803AC5 /* Images.xcassets */; };
 		E9C729841A77EE3A00803AC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9C729821A77EE3A00803AC5 /* LaunchScreen.xib */; };
 		E9C729901A77EE3B00803AC5 /* nim_ios_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C7298F1A77EE3B00803AC5 /* nim_ios_demoTests.m */; };
-		E9C729AA1A77F46000803AC5 /* backend.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C729A71A77F46000803AC5 /* backend.m */; };
-		E9C729AB1A77F46000803AC5 /* system.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C729A91A77F46000803AC5 /* system.m */; };
+		E9C729AA1A77F46000803AC5 /* backend.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C729A71A77F46000803AC5 /* backend.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E9C729AB1A77F46000803AC5 /* system.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C729A91A77F46000803AC5 /* system.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
